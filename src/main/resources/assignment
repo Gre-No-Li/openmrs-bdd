@@ -1,0 +1,36 @@
+You must build a Page Object Model test automation framework where you will be defining pages classes for Login Page, Home Page, Register Page, Patient Details Page and Find Patient Record Page.
+Manage the URL, user credentials, and browser type in the properties file. Use the Junit dependency for you assertions.
+Under the test package, create a package same as above com.academy.techcenture.
+You must build your test automation framework using Cucumber BDD Style. Your framework should take screenshots and generate a report after execution.
+Below are the manual test steps, and you have to decide how to create the feature file with steps. Build your feature in a way that
+you should be able to register multiple customers (use scenario outlines).
+Also use github for collaboration. One person can create the repo and add others as collaborates.
+
+Please work in teams to collaborate and share ideas.
+
+
+Manual Test Steps:
+1. Go to https://demo.openmrs.org/openmrs/login.htm which is the login page.
+2. Verify title, all web elements on the login page (labels, inputs, locations, login button, can't login?)
+3. Enter Admin and Admin123 and select on location to log in
+4. When you login, verify title of page, verify you are logged in as a admin user, verify top options
+5. Verify 10 functionalities on the Home Page
+
+6. Click on register a patient tab
+7. On the registration page, very the title and fill out the demographics, contact info, relationships sections
+8. Once you have filled out the sections, verify once again the patient information is correct before clicking the confirm button.
+
+9. You will land on the patient details page. Verify top sections like given middle and family name, gender, dob and patient id.
+10. Click on sticky note and enter a random next message and click on check
+11. Verify "Patient is successfully added" tooltip on top right.
+12. Verify sticky note has been created/displayed
+13. Verify diagnoses, vitalis, latest observations, health trend summary, weight graph, appointments, recent visits, family, conditions, attachments, allergies
+14. Verify General Actions section
+
+15. Go back to home page
+16. Click on Find Patient Record tab
+17. Verify title, and top elements on the find patient record page
+18. Search the newly created patient by its ID
+19. Verify the result shows up on the table, verify identifier information, name, gender, age and birthdate.
+20. Go back to home page
+21. Logout and close the driver.
