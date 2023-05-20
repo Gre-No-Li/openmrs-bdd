@@ -11,6 +11,8 @@ target/
 *.iws
 *.iml
 *.ipr
+src/main/resources/config.properties
+src/main/java/com/academy/techcenture/driver/Driver.java
 
 ### Eclipse ###
 .apt_generated
