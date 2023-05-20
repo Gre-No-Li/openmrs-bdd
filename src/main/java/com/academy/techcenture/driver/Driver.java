@@ -39,4 +39,10 @@ public class Driver {
         driver.manage().deleteAllCookies();
         return driver;
     }
+    public static void quitDriver(){
+        if (driver != null){
+            driver.quit();
+            driver = null;
+        }
+    }
 }
