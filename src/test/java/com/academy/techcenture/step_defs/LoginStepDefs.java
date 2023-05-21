@@ -36,9 +36,10 @@ public class LoginStepDefs {
 
     @Then("user should be logged in successfully and user should be navigated to Home page")
     public void userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage() {
-      //  homePage.verifyTitle();
-        // homePage.verifyAdminTitle();
-      //  homePage.verifyFunctionalities();
+        homePage = new HomePage(driver);
+        homePage.verifyTitle();
+        homePage.verifyAdminTitle();
+        homePage.verifyFunctionalities();
     }
 
     @When("user enters an invalid password {string}")

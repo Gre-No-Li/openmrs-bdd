@@ -1,4 +1,4 @@
-@regression
+# @regression
 Feature: OpenMRS Login Feature
 
   Background: Login Background Steps

@@ -1,62 +1,114 @@
 package com.academy.techcenture.step_defs;
 
+import com.academy.techcenture.config.ConfigReader;
+import com.academy.techcenture.driver.Driver;
+import com.academy.techcenture.pages.HomePage;
+import com.academy.techcenture.pages.LoginPage;
+import com.academy.techcenture.pages.RegisterPage;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.WebDriver;
 
 public class RegistrationStepDefs {
-    @Then("user should be logged in successfully and be navigated to the Home page")
-    public void user_should_be_logged_in_successfully_and_be_navigated_to_the_home_page() {
+    private WebDriver driver = Driver.getDriver();
+    private LoginPage loginPage;
+    private HomePage homePage;
+    private RegisterPage registerPage;
+    @Given("this user is on the login page")
+    public void user_is_on_the_login_page() {
+        driver.get(ConfigReader.getProperty("url"));
+        loginPage = new LoginPage(driver);
+        loginPage.verifyTitle();
     }
 
-    @When("user clicks on {string} button")
-    public void user_clicks_on_button(String string) {
+    @When("this user enters a valid username {string}")
+    public void user_enters_a_valid_username(String userName) {
+        loginPage.enterUserName(userName);
+    }
+
+    @When("this user enters a valid password {string}")
+    public void user_enters_a_valid_password(String password) {
+        loginPage.enterPassword(password);
+    }
+
+    @When("this user clicks on the login button")
+    public void user_clicks_on_the_login_button() {
+        loginPage.clickOnInpatientWardLink();
+        loginPage.clickonloginBtn();
+    }
+
+    @Then("this user should be logged in successfully and user should be navigated to Home page")
+    public void userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage() {
+        homePage = new HomePage(driver);
+        homePage.verifyTitle();
+        homePage.verifyAdminTitle();
+        homePage.verifyFunctionalities();
+    }
+
+    @When("this user clicks on Register a patient button")
+    public void user_clicks_on_register_a_patient_button() {
+        homePage.clickOnRegisterPatientBtn();
     }
 
     @Then("user should be navigated to a register patient page")
     public void user_should_be_navigated_to_a_register_patient_page() {
+        registerPage = new RegisterPage(driver);
+        registerPage.verifyTitle();
     }
 
     @Then("user enters {string} in the givenName input")
-    public void user_enters_in_the_given_name_input(String string) {
+    public void user_enters_in_the_given_name_input(String givenName) {
+        registerPage.enterGivenName(givenName);
     }
 
     @Then("user enters {string} in the familyName input")
-    public void user_enters_in_the_family_name_input(String string) {
+    public void user_enters_in_the_family_name_input(String familyName) {
+        registerPage.enterFamilyName(familyName);
+        registerPage.clickOnNextBtn();
     }
 
-    @Then("user selects {string} in the gender checkbox")
-    public void user_selects_in_the_gender_checkbox(String string) {
+    @Then("user selects gender in the gender checkbox")
+    public void user_selects_in_the_gender_checkbox() {
+        registerPage.selectMaleGender();
+        registerPage.clickOnNextBtn();
     }
 
     @Then("user enters {string} in the dayOfBirth input")
-    public void user_enters_in_the_day_of_birth_input(String string) {
+    public void user_enters_in_the_day_of_birth_input(String dayOfBirth) {
+        registerPage.enterBirthDay(dayOfBirth);
     }
 
-    @Then("user selects {string} in the monthOfBirth checkbox")
-    public void user_selects_in_the_month_of_birth_checkbox(String string) {
-    }
+    @Then("user selects month of birth in the monthOfBirth checkbox")
+    public void user_selects_in_the_month_of_birth_checkbox() {
+        registerPage.selectBirthMonth();
+            }
 
     @Then("user enters {string} in the yearOfBirth input")
-    public void user_enters_in_the_year_of_birth_input(String string) {
+    public void user_enters_in_the_year_of_birth_input(String yearOfBirth) {
+        registerPage.enterBirthYear(yearOfBirth);
+        registerPage.clickOnNextBtn();
     }
 
     @Then("user enters {string} in the address input")
-    public void user_enters_in_the_address_input(String string) {
+    public void user_enters_in_the_address_input(String address) {
+        registerPage.enterAddress(address);
+        registerPage.clickOnNextBtn();
     }
 
     @Then("user enters {string} in the phone input")
-    public void user_enters_in_the_phone_input(String string) {
+    public void user_enters_in_the_phone_input(String phone) {
+        registerPage.enterPhone(phone);
+        registerPage.clickOnNextBtn();
     }
 
-    @Then("user selects {string} in the reletionship_type checkbox")
-    public void user_selects_in_the_reletionship_type_checkbox(String string) {
-    }
-
-    @Then("user enters {string} in the personName input")
-    public void user_enters_in_the_person_name_input(String string) {
+    @Then("user selects relationship type in the reletionship_type checkbox")
+    public void user_selects_in_the_reletionship_type_checkbox() {
+        registerPage.selectRelationshipType();
+        registerPage.clickOnNextBtn();
     }
 
     @When("user clicks on the confirm button")
     public void user_clicks_on_the_confirm_button() {
+        registerPage.clickOnConfirmBtn();
     }
 
     @Then("user should be registered successful and be navigated to patient page")

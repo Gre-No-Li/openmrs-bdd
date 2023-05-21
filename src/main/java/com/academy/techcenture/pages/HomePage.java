@@ -10,13 +10,13 @@ import org.openqa.selenium.support.ui.Wait;
 public class HomePage extends LoginPage{
     public HomePage (WebDriver driver){super(driver);
     }
-       @FindBy(xpath = "//i[@class='icon-search']")
+    @FindBy(xpath = "//i[@class='icon-search']")
     protected WebElement findPatientRecordBtn;
     @FindBy(id = "org-openmrs-module-coreapps-activeVisitsHomepageLink-org-openmrs-module-coreapps-activeVisitsHomepageLink-extension")
     protected WebElement activeVisitsBtn;
     @FindBy(xpath = "//i[@class='icon-vitals']")
     protected WebElement captureVitalsBtn;
-    @FindBy(xpath = "//i[@class='icon-user']")
+    @FindBy(id = "referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension")
     protected WebElement registerAPatientBtn;
     @FindBy(id = "appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension")
     protected WebElement appointmentShedulingBtn;
@@ -30,6 +30,10 @@ public class HomePage extends LoginPage{
     protected WebElement systemAdministrationBtn;
     @FindBy(xpath = "//h4[contains(text(),'Logged in as Super User')]")
     protected WebElement superUserAdminHeader;
+    @FindBy(id = "coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension")
+    protected WebElement findPatientRecordBtn2;
+    @FindBy(xpath = "//li[@class='nav-item logout']")
+    protected WebElement logoutBtn;
     public void verifyTitle(){
         wait.until(ExpectedConditions.titleIs("Home"));
         Assert.assertTrue(driver.getTitle().equals("Home"));
@@ -56,6 +60,10 @@ public class HomePage extends LoginPage{
         Assert.assertTrue(configureMetadataBtn.isEnabled());
         Assert.assertTrue(systemAdministrationBtn.isDisplayed());
         Assert.assertTrue(systemAdministrationBtn.isEnabled());
+    }
+    public void clickOnRegisterPatientBtn(){
+       // Assert.assertTrue(registerAPatientBtn.isEnabled());
+          registerAPatientBtn.click();
     }
 
 }
