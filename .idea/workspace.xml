@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0681c45a-666a-4119-b903-479f322b7714" name="Changes" comment="login.feature are created and added. Need to correct - userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage in the LoginStepDefs class">
+    <list default="true" id="0681c45a-666a-4119-b903-479f322b7714" name="Changes" comment="registration.feature are created and added. Need to add verifying patient's info before clicking submit button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/PatientPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/PatientPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/registration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/LoginStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/LoginStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/RegistrationStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/RegistrationStepDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684628488208</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="registration.feature are created and added. Need to add verifying patient's info before clicking submit button">
+      <created>1684641611922</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684641611922</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +224,7 @@
     <MESSAGE value="Feature files are created and added. Patterns of LoginStepDefs, RegistrationStepDef and FindPatientStepDefs are created and added" />
     <MESSAGE value="Driver class are fixed" />
     <MESSAGE value="login.feature are created and added. Need to correct - userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage in the LoginStepDefs class" />
-    <option name="LAST_COMMIT_MESSAGE" value="login.feature are created and added. Need to correct - userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage in the LoginStepDefs class" />
+    <MESSAGE value="registration.feature are created and added. Need to add verifying patient's info before clicking submit button" />
+    <option name="LAST_COMMIT_MESSAGE" value="registration.feature are created and added. Need to add verifying patient's info before clicking submit button" />
   </component>
 </project>

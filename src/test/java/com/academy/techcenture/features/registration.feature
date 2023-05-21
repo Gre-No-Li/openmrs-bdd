@@ -22,8 +22,13 @@ Feature: OpenMRS Registration Feature
     And user selects relationship type in the reletionship_type checkbox
     When user clicks on the confirm button
     Then user should be registered successful and be navigated to patient page
+    And user must check the given name, it must match "<given_name>"
+    And user must check the family name, it must match "<family_name>"
+    And user must check the gender, it must match "Male"
+    And user must check the dob, it must match "<day_of_birth>"."Mar"."<year_of_birth>"
+    And user should be verify patient id
 
     Examples:
       | given_name | family_name | day_of_birth | year_of_birth | address            | phone     |
-      | Dwane      | Wade        | 23           | 1977          | 678 Gelding street | 123703456 |
+      | Chris      | Wade        | 23           | 1988          | 678 Gelding street | 123703456 |
 

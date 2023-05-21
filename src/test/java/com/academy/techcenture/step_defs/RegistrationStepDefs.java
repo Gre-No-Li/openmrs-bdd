@@ -4,6 +4,7 @@ import com.academy.techcenture.config.ConfigReader;
 import com.academy.techcenture.driver.Driver;
 import com.academy.techcenture.pages.HomePage;
 import com.academy.techcenture.pages.LoginPage;
+import com.academy.techcenture.pages.PatientPage;
 import com.academy.techcenture.pages.RegisterPage;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ public class RegistrationStepDefs {
     private LoginPage loginPage;
     private HomePage homePage;
     private RegisterPage registerPage;
+    private PatientPage patientPage;
     @Given("this user is on the login page")
     public void user_is_on_the_login_page() {
         driver.get(ConfigReader.getProperty("url"));
@@ -113,6 +115,33 @@ public class RegistrationStepDefs {
 
     @Then("user should be registered successful and be navigated to patient page")
     public void user_should_be_registered_successful_and_be_navigated_to_patient_page() {
+        patientPage = new PatientPage(driver);
+        patientPage.verifyTitle();
     }
 
+    @And("user must check the given name, it must match {string}")
+    public void userMustCheckTheGivenNameItMustMatch(String givenName) {
+        patientPage.verifyPatientGivenName(givenName);
+    }
+
+    @And("user must check the family name, it must match {string}")
+    public void userMustCheckTheFamilyNameItMustMatch(String familyName) {
+        patientPage.verifyPatientFamilyName(familyName);
+    }
+
+    @And("user must check the gender, it must match {string}")
+    public void userMustCheckTheGenderItMustMatch(String male) {
+        patientPage.verifyPatientGender(male);
+    }
+
+
+    @And("user must check the dob, it must match {string}.{string}.{string}")
+    public void userMustCheckTheDobItMustMatch(String day, String month, String year) {
+        patientPage.verifyDob(day,month,year);
+    }
+
+    @And("user should be verify patient id")
+    public void userShouldBeVerifyPatientId() {
+        patientPage.verifyPatientId();
+    }
 }
