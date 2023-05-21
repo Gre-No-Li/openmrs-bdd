@@ -35,7 +35,7 @@ public class LoginStepDefs {
     }
 
     @Then("user should be logged in successfully and user should be navigated to Home page")
-    public void userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage() {
+    public void userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage() throws InterruptedException {
         homePage = new HomePage(driver);
         homePage.verifyTitle();
         homePage.verifyAdminTitle();

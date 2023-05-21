@@ -6,6 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 public class PatientPage extends LoginPage{
     public PatientPage (WebDriver driver) {
         super(driver);
@@ -30,6 +36,8 @@ public class PatientPage extends LoginPage{
     protected WebElement noteText;
     @FindBy(xpath = "//h3[text()='General Actions']")
     protected WebElement generalActionsMenu;
+    @FindBy(xpath = "//div[@class='logo']")
+    protected WebElement homePageBtn;
     public void verifyTitle(){
        Assert.assertTrue(driver.getTitle().equals("OpenMRS Electronic Medical Record"));
     }
@@ -68,6 +76,20 @@ public class PatientPage extends LoginPage{
     }
     public void verifyGeneralActionsMenu(){
         Assert.assertTrue(generalActionsMenu.isDisplayed());
+    }
+    public void getPatientId() throws IOException {
+        String patientIdTxt = patientId.getText().trim();
+        System.out.println(patientIdTxt);
+        PrintWriter out = new PrintWriter("src/main/resources/patientid.txt");
+        out.println(patientIdTxt);
+        out.close();
+                    }
+    public String patientId(){
+        String patientIdTxt = patientId.getText().trim();
+        return patientIdTxt;
+    }
+    public void clickOnHomePageBtn(){
+        homePageBtn.click();
     }
 
 }

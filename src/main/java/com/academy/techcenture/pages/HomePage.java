@@ -65,5 +65,8 @@ public class HomePage extends LoginPage{
        // Assert.assertTrue(registerAPatientBtn.isEnabled());
           registerAPatientBtn.click();
     }
+    public void clickOnFindPatientBtn(){
+        findPatientRecordBtn.click();
+    }
 
 }

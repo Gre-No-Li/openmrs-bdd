@@ -33,5 +33,6 @@ Feature: OpenMRS Registration Feature
 
     Examples:
       | given_name | family_name | day_of_birth | year_of_birth | address            | phone     |
-      | Chris      | Wade        | 23           | 1988          | 678 Gelding street | 123703456 |
+      | Chris      | Bosh        | 24           | 1986          | 456 Gelding street | 703704705 |
+      | Lebron     | Wade        | 23           | 1988          | 678 Gelding street | 123703456 |
 

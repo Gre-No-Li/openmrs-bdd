@@ -1,9 +1,10 @@
-# @regression
+ @regression
 Feature: OpenMRS Login Feature
 
   Background: Login Background Steps
     Given user is on the login page
 
+    @smoke
   Scenario: Successful login
     When user enters a valid username "Admin"
     And user enters a valid password "Admin123"

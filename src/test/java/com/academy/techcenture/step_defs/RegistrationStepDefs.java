@@ -9,6 +9,9 @@ import com.academy.techcenture.pages.RegisterPage;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class RegistrationStepDefs {
     private WebDriver driver = Driver.getDriver();
     private LoginPage loginPage;
@@ -39,7 +42,7 @@ public class RegistrationStepDefs {
     }
 
     @Then("this user should be logged in successfully and user should be navigated to Home page")
-    public void userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage() {
+    public void userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage() throws InterruptedException {
         homePage = new HomePage(driver);
         homePage.verifyTitle();
         homePage.verifyAdminTitle();
@@ -141,8 +144,9 @@ public class RegistrationStepDefs {
     }
 
     @And("user should be verify patient id")
-    public void userShouldBeVerifyPatientId() {
+    public void userShouldBeVerifyPatientId() throws IOException {
         patientPage.verifyPatientId();
+        patientPage.getPatientId();
     }
 
     @And("user should click on sticky note and enter a  message and click on check")
