@@ -27,6 +27,9 @@ Feature: OpenMRS Registration Feature
     And user must check the gender, it must match "Male"
     And user must check the dob, it must match "<day_of_birth>"."Mar"."<year_of_birth>"
     And user should be verify patient id
+    And user should click on sticky note and enter a  message and click on check
+    And user should be verify sticky note has been displayed
+    And user should be verify general actions section
 
     Examples:
       | given_name | family_name | day_of_birth | year_of_birth | address            | phone     |

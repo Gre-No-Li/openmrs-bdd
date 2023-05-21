@@ -20,6 +20,16 @@ public class PatientPage extends LoginPage{
     protected WebElement patientGender;
     @FindBy(xpath = "//div[@class='gender-age col-auto']/span[2]")
     protected WebElement patientDob;
+    @FindBy(xpath = "//i[@class='icon-sticky-note']")
+    protected WebElement stickyNoteLink;
+    @FindBy(xpath = "//textarea[@placeholder='Enter a note']")
+    protected WebElement textArea;
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    protected WebElement checkNoteBtn;
+    @FindBy(xpath = "//pre[@class='preformatted-note ng-binding']")
+    protected WebElement noteText;
+    @FindBy(xpath = "//h3[text()='General Actions']")
+    protected WebElement generalActionsMenu;
     public void verifyTitle(){
        Assert.assertTrue(driver.getTitle().equals("OpenMRS Electronic Medical Record"));
     }
@@ -43,6 +53,21 @@ public class PatientPage extends LoginPage{
     }
     public void verifyPatientId(){
         Assert.assertTrue(patientId.isDisplayed());
+    }
+    public void clickonStickynotelink(){
+        stickyNoteLink.click();
+    }
+    public void enterTextInNoteArea(){
+        textArea.sendKeys("Hello");
+    }
+    public void clickOnCheckNoteBtn(){
+        checkNoteBtn.click();
+    }
+    public void verifyNoteText(){
+        Assert.assertTrue(noteText.isDisplayed());
+    }
+    public void verifyGeneralActionsMenu(){
+        Assert.assertTrue(generalActionsMenu.isDisplayed());
     }
 
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0681c45a-666a-4119-b903-479f322b7714" name="Changes" comment="registration.feature are created and added. Need to add verifying patient's info before clicking submit button">
+    <list default="true" id="0681c45a-666a-4119-b903-479f322b7714" name="Changes" comment="registration.feature is completed and fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/PatientPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/PatientPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/registration.feature" afterDir="false" />
@@ -204,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684641611922</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="registration.feature is completed and fixed">
+      <created>1684646036622</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684646036622</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +232,7 @@
     <MESSAGE value="Driver class are fixed" />
     <MESSAGE value="login.feature are created and added. Need to correct - userShouldBeLoggedInSuccessfullyAndUserShouldBeNavigatedToHomePage in the LoginStepDefs class" />
     <MESSAGE value="registration.feature are created and added. Need to add verifying patient's info before clicking submit button" />
-    <option name="LAST_COMMIT_MESSAGE" value="registration.feature are created and added. Need to add verifying patient's info before clicking submit button" />
+    <MESSAGE value="registration.feature is completed and fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="registration.feature is completed and fixed" />
   </component>
 </project>

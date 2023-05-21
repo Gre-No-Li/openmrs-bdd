@@ -144,4 +144,21 @@ public class RegistrationStepDefs {
     public void userShouldBeVerifyPatientId() {
         patientPage.verifyPatientId();
     }
+
+    @And("user should click on sticky note and enter a  message and click on check")
+    public void userShouldClickOnStickyNoteAndEnterAMessageAndClickOnCheck() {
+        patientPage.clickonStickynotelink();
+        patientPage.enterTextInNoteArea();
+        patientPage.clickOnCheckNoteBtn();
+    }
+
+    @And("user should be verify sticky note has been displayed")
+    public void userShouldBeVerifyStickyNoteHasBeenDisplayed() {
+        patientPage.verifyNoteText();
+    }
+
+    @And("user should be verify general actions section")
+    public void userShouldBeVerifyGeneralActionsSection() {
+        patientPage.verifyGeneralActionsMenu();
+    }
 }
