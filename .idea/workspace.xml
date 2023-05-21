@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0681c45a-666a-4119-b903-479f322b7714" name="Changes" comment=".gitIgnore file fixed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/FindPatientPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/RegisterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/findPatient.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/login.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/registration.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/hooks/Hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/runner/RunnerRegression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/runner/RunnerSmoke.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/FindPatientStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/LoginStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/RegistrationStepDefs.java" afterDir="false" />
+    <list default="true" id="0681c45a-666a-4119-b903-479f322b7714" name="Changes" comment="Driver class are fixed">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/extent.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/spark-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/driver/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/runner/RunnerRegression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/runner/RunnerRegression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/runner/RunnerSmoke.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/runner/RunnerSmoke.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/LoginStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/LoginStepDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +53,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Cucumber Java.Feature: findPatient">
+  <component name="RunManager" selected="Cucumber Java.Feature: login">
     <configuration name="Feature: findPatient" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/findPatient.feature" />
@@ -97,14 +92,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: registration" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Invalid credentials" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/registration.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/login.feature" />
       <option name="GLUE" value="com.academy.techcenture.hooks com.academy.techcenture.step_defs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="openmrs-bdd" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: registration" />
+      <option name="NAME_FILTER" value="^Invalid credentials$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Invalid credentials$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Invalid credentials" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -116,21 +112,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.academy.techcenture.features in openmrs-bdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Successful login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/login.feature" />
+      <option name="GLUE" value="com.academy.techcenture.hooks com.academy.techcenture.step_defs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="openmrs-bdd" />
+      <option name="NAME_FILTER" value="^Successful login$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Successful login$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Successful login" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.academy.techcenture.features.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.academy.techcenture.features" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.academy.techcenture.runner in openmrs-bdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RunnerRegression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="openmrs-bdd" />
       <extension name="coverage">
         <pattern>
@@ -139,18 +141,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.academy.techcenture.runner" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="com.academy.techcenture.runner.RunnerRegression" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: findPatient" />
-        <item itemvalue="Cucumber Java.Feature: registration" />
         <item itemvalue="Cucumber Java.Feature: login" />
-        <item itemvalue="JUnit.com.academy.techcenture.features in openmrs-bdd" />
-        <item itemvalue="JUnit.com.academy.techcenture.runner in openmrs-bdd" />
+        <item itemvalue="JUnit.RunnerRegression" />
+        <item itemvalue="Cucumber Java.Scenario: Successful login" />
+        <item itemvalue="Cucumber Java.Scenario: Invalid credentials" />
+        <item itemvalue="Cucumber Java.Feature: findPatient" />
       </list>
     </recent_temporary>
   </component>
@@ -177,12 +180,39 @@
       <option name="project" value="LOCAL" />
       <updated>1684545088694</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Feature files are created and added. Patterns of LoginStepDefs, RegistrationStepDef and FindPatientStepDefs are created and added">
+      <created>1684618596919</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684618596919</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Driver class are fixed">
+      <created>1684618634734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684618634734</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Driver class, ConfigReader class are added and fixed" />
     <MESSAGE value=".gitIgnore file fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitIgnore file fixed" />
+    <MESSAGE value="Feature files are created and added. Patterns of LoginStepDefs, RegistrationStepDef and FindPatientStepDefs are created and added" />
+    <MESSAGE value="Driver class are fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Driver class are fixed" />
   </component>
 </project>

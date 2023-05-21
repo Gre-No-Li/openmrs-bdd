@@ -1,3 +1,4 @@
+@regression
 Feature: OpenMRS Login Feature
 
   Background: Login Background Steps
@@ -7,7 +8,7 @@ Feature: OpenMRS Login Feature
     When user enters a valid username "Admin"
     And user enters a valid password "Admin123"
     And user clicks on the login button
-    Then user should be logged in successfully
+    Then user should be logged in successfully and user should be navigated to Home page
 
   Scenario: Invalid credentials
     When user enters a valid username "Admin"
