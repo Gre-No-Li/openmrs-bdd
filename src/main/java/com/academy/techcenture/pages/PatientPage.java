@@ -4,13 +4,9 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 public class PatientPage extends LoginPage{
     public PatientPage (WebDriver driver) {
@@ -38,6 +34,8 @@ public class PatientPage extends LoginPage{
     protected WebElement generalActionsMenu;
     @FindBy(xpath = "//div[@class='logo']")
     protected WebElement homePageBtn;
+    @FindBy(xpath = "//p[contains(text(), 'Created Patient Record:')]")
+    protected WebElement successCreatingPatientMsg;
     public void verifyTitle(){
        Assert.assertTrue(driver.getTitle().equals("OpenMRS Electronic Medical Record"));
     }
@@ -90,6 +88,18 @@ public class PatientPage extends LoginPage{
     }
     public void clickOnHomePageBtn(){
         homePageBtn.click();
+    }
+    public void verifyPatientCreatedMsg(String givenName, String familyName) throws InterruptedException {
+        Thread.sleep(5000);
+        String patientTxt = successCreatingPatientMsg.getAttribute("textContent");
+        String patientNameGivenLeft = patientGivenName.getText();
+        System.out.println("Name on left "+ patientNameGivenLeft);
+        String patientName = givenName + " " + familyName;
+        System.out.println("Patient 1 : " + patientTxt);
+        System.out.println("Patient 2 : " + patientName);
+        boolean containsCreatedName = patientTxt.contains(patientName);
+        Assert.assertTrue("Name is incorrect", containsCreatedName);
+
     }
 
 }

@@ -9,7 +9,6 @@ import com.academy.techcenture.pages.RegisterPage;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class RegistrationStepDefs {
@@ -121,6 +120,10 @@ public class RegistrationStepDefs {
         patientPage = new PatientPage(driver);
         patientPage.verifyTitle();
     }
+    @And("user should be verify Patient is successfully added tooltip on top right, it must mutch {string} {string}")
+    public void userShouldBeVerifyPatientIsSuccessfullyAddedTooltipOnTopRightItMustMutch(String givenName, String familyName) throws InterruptedException {
+        patientPage.verifyPatientCreatedMsg(givenName, familyName);
+    }
 
     @And("user must check the given name, it must match {string}")
     public void userMustCheckTheGivenNameItMustMatch(String givenName) {
@@ -136,7 +139,6 @@ public class RegistrationStepDefs {
     public void userMustCheckTheGenderItMustMatch(String male) {
         patientPage.verifyPatientGender(male);
     }
-
 
     @And("user must check the dob, it must match {string}.{string}.{string}")
     public void userMustCheckTheDobItMustMatch(String day, String month, String year) {
@@ -165,4 +167,7 @@ public class RegistrationStepDefs {
     public void userShouldBeVerifyGeneralActionsSection() {
         patientPage.verifyGeneralActionsMenu();
     }
+
+
+
 }

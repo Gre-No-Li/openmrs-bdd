@@ -22,6 +22,7 @@ Feature: OpenMRS Registration Feature
     And user selects relationship type in the reletionship_type checkbox
     When user clicks on the confirm button
     Then user should be registered successful and be navigated to patient page
+    And user should be verify Patient is successfully added tooltip on top right, it must mutch "<given_name>" "<family_name>"
     And user must check the given name, it must match "<given_name>"
     And user must check the family name, it must match "<family_name>"
     And user must check the gender, it must match "Male"
@@ -33,6 +34,6 @@ Feature: OpenMRS Registration Feature
 
     Examples:
       | given_name | family_name | day_of_birth | year_of_birth | address            | phone     |
-      | Chris      | Bosh        | 24           | 1986          | 456 Gelding street | 703704705 |
-      | Lebron     | Wade        | 23           | 1988          | 678 Gelding street | 123703456 |
+      | Stephen    | Curry       | 19           | 1987          | 346 United street  | 703704705 |
+      | Draymond   | Green       | 23           | 1988          | 678 Gelding street | 123703456 |
 

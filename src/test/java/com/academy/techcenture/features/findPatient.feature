@@ -19,4 +19,4 @@ Feature: OpenMRS Find Patient Feature
 
      Examples:
        | given_name | family_name | day_of_birth | year_of_birth |
-       | Lebron     | Wade        | 23           | 1988          |
+       | Draymond   | Green       | 23           | 1988          |

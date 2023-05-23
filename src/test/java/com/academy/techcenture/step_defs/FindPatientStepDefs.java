@@ -62,7 +62,7 @@ public class FindPatientStepDefs {
     }
 
     @Then("user enters patient's ID in the search by ID input")
-    public void user_enters_patient_s_id_in_the_search_by_id_input() throws IOException, InterruptedException {
+    public void user_enters_patient_s_id_in_the_search_by_id_input() throws IOException {
         patientPage = new PatientPage(driver);
         String patientIdFromFile = Files.readString(Path.of("src/main/resources/patientid.txt"));
         System.out.println(patientIdFromFile);
