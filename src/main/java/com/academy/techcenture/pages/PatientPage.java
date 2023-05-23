@@ -77,7 +77,7 @@ public class PatientPage extends LoginPage{
     }
     public void getPatientId() throws IOException {
         String patientIdTxt = patientId.getText().trim();
-        System.out.println(patientIdTxt);
+        System.out.println("Patient ID: " + patientIdTxt);
         PrintWriter out = new PrintWriter("src/main/resources/patientid.txt");
         out.println(patientIdTxt);
         out.close();
@@ -93,10 +93,10 @@ public class PatientPage extends LoginPage{
         Thread.sleep(5000);
         String patientTxt = successCreatingPatientMsg.getAttribute("textContent");
         String patientNameGivenLeft = patientGivenName.getText();
-        System.out.println("Name on left "+ patientNameGivenLeft);
+        System.out.println("Name on left :"+ patientNameGivenLeft);
         String patientName = givenName + " " + familyName;
-        System.out.println("Patient 1 : " + patientTxt);
-        System.out.println("Patient 2 : " + patientName);
+        System.out.println("Text in p tag for compare : " + patientTxt);
+        System.out.println("Patient's name : " + patientName);
         boolean containsCreatedName = patientTxt.contains(patientName);
         Assert.assertTrue("Name is incorrect", containsCreatedName);
 

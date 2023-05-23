@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0681c45a-666a-4119-b903-479f322b7714" name="Changes" comment="all features files are completed and added. All regression and smoke tests are successful">
+    <list default="true" id="0681c45a-666a-4119-b903-479f322b7714" name="Changes" comment="User should be verify Patient is successfully added tooltip on top right STEP added in the registration.feature and PatientPage class and RegistrationStepDefs class are fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/PatientPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/academy/techcenture/pages/PatientPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/findPatient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/findPatient.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/features/registration.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/FindPatientStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/FindPatientStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/RegistrationStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/step_defs/RegistrationStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/runner/RunnerRegression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/academy/techcenture/runner/RunnerRegression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684693935828</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="User should be verify Patient is successfully added tooltip on top right STEP added in the registration.feature and PatientPage class and RegistrationStepDefs class are fixed">
+      <created>1684804386342</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684804386343</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +250,7 @@
     <MESSAGE value="registration.feature is completed and fixed" />
     <MESSAGE value="registration.feature is fixed. Need to finish: 13. Verify diagnoses, vitalis, latest observations, health trend summary, weight graph, appointments, recent visits, family, conditions, attachments, allergies" />
     <MESSAGE value="all features files are completed and added. All regression and smoke tests are successful" />
-    <option name="LAST_COMMIT_MESSAGE" value="all features files are completed and added. All regression and smoke tests are successful" />
+    <MESSAGE value="User should be verify Patient is successfully added tooltip on top right STEP added in the registration.feature and PatientPage class and RegistrationStepDefs class are fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="User should be verify Patient is successfully added tooltip on top right STEP added in the registration.feature and PatientPage class and RegistrationStepDefs class are fixed" />
   </component>
 </project>

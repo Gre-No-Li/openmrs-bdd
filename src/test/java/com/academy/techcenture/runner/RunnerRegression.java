@@ -12,7 +12,8 @@ import org.junit.runner.RunWith;
         tags = "@regression",
         plugin={"pretty", "junit:target/JUNITReport/report.xml",
                 "json:target/JSONReport/report.json",
-                "html:target/HtmlReport/report.html"}
+                "html:target/HtmlReport/report.html",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 
 )
 public class RunnerRegression {
